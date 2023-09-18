@@ -1,0 +1,28 @@
+﻿<Window x:Class="PointOfSale.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Main Window" Width="800" Height="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left StackPanel for Buttons and Menu -->
+        <StackPanel Grid.Column="0" Background="DarkGray">
+            <!-- Add Buttons and Menu Items Here -->
+            <Button Content="Dashboard" Style="{StaticResource AttractiveButtonStyle}" Click="DashboardButton_Click"/>
+            <Button Content="Employees" Style="{StaticResource AttractiveButtonStyle}" Click="EmployeesButton_Click"/>
+            <Button Content="Products" Style="{StaticResource AttractiveButtonStyle}" Click="ProductsButton_Click"/>
+            <Menu>
+                <!-- Add Menu Items Here -->
+            </Menu>
+        </StackPanel>
+
+        <!-- Right StackPanel with White Theme -->
+        <StackPanel Grid.Column="1" Background="White">
+            <!-- Content Placeholder (User Controls will be loaded here) -->
+            <ContentControl x:Name="contentControl" />
+        </StackPanel>
+    </Grid>
+</Window>
